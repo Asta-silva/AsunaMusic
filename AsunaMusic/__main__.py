@@ -2,7 +2,7 @@ import requests
 from pyrogram import Client as Bot
 
 from AsunaMusic.config import API_HASH, API_ID, BG_IMAGE, BOT_TOKEN
-from AsunaMusic.services.callsmusic import run
+from AsunaMusic.services.callsmusic import run_async
 
 response = requests.get(BG_IMAGE)
 file = open("./etc/foreground.png", "wb")
@@ -18,4 +18,4 @@ bot = Bot(
 )
 
 bot.start()
-run()
+run_async()
